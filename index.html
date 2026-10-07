@@ -430,7 +430,8 @@
   .hof-grid{
     margin-top:40px;
     display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit, minmax(220px,260px));
+    justify-content:center;
     gap:20px;
     text-align:left;
   }
@@ -441,6 +442,13 @@
     overflow:hidden;
   }
   .hof-card img{ width:100%; aspect-ratio:1/1; object-fit:cover; }
+  .hof-card .mono{
+    aspect-ratio:1/1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;
+    background:var(--espresso); color:var(--cream);
+  }
+  .hof-card .mono .initials{ font-family:var(--display); font-weight:900; font-size:72px; line-height:1; letter-spacing:0.02em; }
+  .hof-card .mono .badge{ font-family:var(--label); font-weight:600; font-size:11.5px; letter-spacing:0.18em; text-transform:uppercase; opacity:0.85; }
+  .hof-card .num{ display:inline-block; font-family:var(--label); font-weight:600; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--espresso); margin-bottom:6px; }
   .hof-card .info{ padding:16px 18px 18px; }
   .hof-card .who{ font-family:var(--display); font-weight:700; font-size:20px; text-transform:uppercase; }
   .hof-card .meta{ display:block; margin-top:4px; font-family:var(--label); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--ash); }
@@ -626,7 +634,7 @@
       </div>
       <div class="menu-row">
         <div>
-          <span class="name">The Kunsei Feast</span>
+          <span class="name">The Kunsei Titan</span>
           <span class="desc">Serves 4-6, with double sides. 500g Beef Dino Ribs, Jalapeno &amp; Cheese Sausage Duo, Spare Ribs, Pulled Pork, Brisket, Half Chicken &amp; Pork Belly Burger</span>
         </div>
         <div class="price">R1250<span class="cents">.00</span></div>
@@ -887,7 +895,7 @@
       <!--
         TO ADD A WINNER: copy this block, remove the comment markers, and fill it in.
         Put the photo in the same folder as this file (e.g. winners/thabo.jpg).
-        Once you add the first winner, delete the "hof-empty" block below.
+        Add each new winner after the last champion card.
 
       <div class="hof-card">
         <img src="winners/name.jpg" alt="Winner name">
@@ -898,9 +906,18 @@
       </div>
       -->
 
-      <div class="hof-empty">
-        <div class="who">No champions yet</div>
-        <p>Be the first name on this wall.</p>
+      <!-- CHAMPION #1. To add a photo later, replace the whole <div class="mono">...</div> with:
+           <img src="winners/blaine.jpg" alt="Blaine Dyason"> -->
+      <div class="hof-card">
+        <div class="mono">
+          <span class="initials">BD</span>
+          <span class="badge">2KG Champion</span>
+        </div>
+        <div class="info">
+          <span class="num">Champion #1</span>
+          <div class="who">Blaine Dyason</div>
+          <span class="meta">eMalahleni</span>
+        </div>
       </div>
     </div>
   </div>
